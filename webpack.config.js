@@ -1,5 +1,5 @@
 const path = require('path');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
  
   entry: {
@@ -8,6 +8,11 @@ module.exports = {
     menu: './src/menu.js',
     contact: './src/contact.js',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    }),
+  ],
   mode: 'development',
   output: {
     filename: '[name].bundle.js',
